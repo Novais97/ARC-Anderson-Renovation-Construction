@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+        <link rel="stylesheet" href="index.css">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 64x64">
+    </head>
+    <body>
+        <header>
+            <!--nome da empresa oficial-->
+            <h1>ARC | Anderson Renovation & Construction</h1>
+        </header>
+        <!--informacoes iniciais (slogan)-->
+        <div class="initial-info"><i>"Driven by Precision. Powered by Integrity. Built to Transform Every Space Into a Statement of Strength and Style."</i></div>
+        <!--sessao de carrosel de slides-->
+          <!-- Carrossel -->
+  <div class="slide-container">
+    <!-- Inputs e Slides no mesmo nível -->
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+    <input type="radio" name="slide" id="slide4">
+    <input type="radio" name="slide" id="slide5">
+
+    <div class="slides">
+      <div class="slide"><img src="WhatsApp Image 2025-06-12 at 13.21.28_b035bc54.jpg" alt="Bottle 1"></div>
+      <div class="slide"><img src="WhatsApp Image 2025-06-12 at 13.21.29_3974b46f.jpg" alt="Bottle 2"></div>
+      <div class="slide"><img src="WhatsApp Image 2025-06-12 at 13.21.29_dc767ea9.jpg" alt="Bottle 3"></div>
+      <div class="slide"><img src="WhatsApp Image 2025-06-12 at 13.21.33_8c710d35.jpg" alt="Bottle 4"></div>
+      <div class="slide"><img src="WhatsApp Image 2025-06-12 at 13.21.35_22a32fb5.jpg" alt="Bottle 5"></div>
+    </div>
+
+    <div class="nav">
+      <label for="slide1" class="bar"></label>
+      <label for="slide2" class="bar"></label>
+      <label for="slide3" class="bar"></label>
+      <label for="slide4" class="bar"></label>
+      <label for="slide5" class="bar"></label>
+    </div>
+  </div>
+
+        <!--divisorias de content-->
+
+   <div class="box-container">
+  <div class="box-content">
+    <h2>Comprehensive Renovation Services with Quality and Efficiency</h2>
+    <span></span>
+    <p>At <strong>ARC | Anderson Renovation & Construction</strong>, we specialize in transforming spaces with excellence and attention to detail. We offer a complete range of renovation services tailored to your needs, ensuring lasting results and superior finishes.</p>
+
+    <h2> Our Services:</h2>
+    <ul>
+  <li><strong>Professional Painting:</strong> flawless finishes that refresh and enhance any space.</li>
+  <li><strong>Door Installation:</strong> precise work to guarantee both functionality and aesthetics.</li>
+  <li><strong>Hardwood and Tile Flooring:</strong> installation and finishing with high-quality materials.</li>
+  <li><strong>Tile and Ceramic Work:</strong> durable and beautiful coverings for walls and floors.</li>
+  <li><strong>Basement Renovations:</strong> optimizing and renewing lower-level spaces for greater comfort and use.</li>
+  <li><strong>Deck Construction and Renovation:</strong> expanding outdoor areas with style and durability.</li>
+  <li><strong>Carpentry:</strong> custom solutions for furniture, cabinetry, and special finishes.</li>
+</ul>
+    <p>We work with a skilled, dedicated team focused on meeting deadlines and ensuring client satisfaction at every stage of the project. Whether for small upgrades or complete remodels, we provide personalized service and efficient execution to transform your space into something unique.
+
+Trust ARC to deliver the renovation your project deserves — quality, reliability, and professionalism in every detail.
+
+</p>
+    <button  id="scrollBtn">Get a Quote</button>
+  </div>
+
+  <div class="box img">
+    <img src="pexels-rquiros-2219024.jpg" alt="Banner de servicos" />
+    
+    
+  </div>
+
+</div>
+<div class="after-img"> <!--pos bannner-->
+  <h2>ARC | Anderson Renovation & Construction</h2>
+  <p>With a legacy spanning over 15 years, ARC Anderson Renovation & Construction has been dedicated to transforming spaces and enhancing properties. Our team of skilled professionals specializes in a wide range of construction services, ensuring quality craftsmanship and attention to detail in every project. Whether it's a residential renovation or a commercial build, we are committed to delivering results that exceed expectations.</p>
+</div>
+<div class="quote-box">
+  <h3>Request a Quote</h3>
+  <p>Interested in our services? Get in touch and receive a custom quote tailored to your needs.</p>
+
+</div>
+
+<div class="form-wrapper" id="form-section">
+  <form action="https://formsubmit.co/novais.marcos.usa@gmail.com" method="POST">
+    <h2>Request a Quote</h2>
+
+    <div class="form-group">
+      <label for="nome">Name:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telefone">Phone-Number:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+    </div>
+
+    <div class="form-group">
+      <label for="mensagem">What can we Do for you?:</label>
+      <textarea id="mensagem" name="mensagem" rows="6" maxlength="250" placeholder="Digite até 250 caracteres..." required></textarea>
+    </div>
+
+    
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_next" value="https://sua-pagina.com/obrigado.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+
+        <script>
+function startSlideShow(totalSlides, interval = 4000) {
+  let currentSlide = 1;
+
+  setInterval(() => {
+    const radio = document.getElementById(`slide${currentSlide}`);
+    if (radio) radio.checked = true;
+
+    currentSlide++;
+    if (currentSlide > totalSlides) currentSlide = 1;
+  }, interval);
+}
+
+document.getElementById('scrollBtn').addEventListener('click', () => {
+  const target = document.getElementById('form-section');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+startSlideShow(5, 4000);
+        </script>
+
+    </body>
+</html>
